@@ -1,6 +1,10 @@
 *{
 	margin: 0;
 }
+#logoWrapper{
+    background-color: greenyellow;
+    width: 100%;
+}
 #logo{
 	width: 100%;
 	height: 100%;
@@ -27,8 +31,6 @@
 	background: white;
 	
 }
-
-
 #cursos article{
 	padding: 10px;
 	border: 1px solid white;
