@@ -49,13 +49,12 @@ nav li{
 	float: left;
     background-color: lightseagreen;
 }
-/*submenu menu*/
 nav li li{
 	background: #222;
 	max-height: 0;
 	transition: all .5s;
 	overflow: hidden;	
-	width: 200px;
+	width: auto;
 }
 nav li:hover li{
 	max-height: 1000px;

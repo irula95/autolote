@@ -49,6 +49,9 @@ p{
     background-color: aliceblue;
     color: black;
 }
+.submenu li{
+    background-color: lightseagreen;
+}
 
 /*CSS PARA EL LOGO, QUE ESTA DENTRO DEL BANNER*/
 #bannerImg{ /*CARRITOOOOO*/
