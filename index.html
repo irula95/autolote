@@ -7,17 +7,15 @@
     <link rel="stylesheet" type="text/css" href="css/prin.css">
     <link rel="stylesheet" type="text/css" href="fonts.css">
     <link rel="stylesheet" href="css/style.css" />
-    <script>
-    $(document).ready(function(){
-        $("#indexMenu").menu();
-    }); 
-</script>
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js" ></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
 </head>
 <body>
-    <header id="mainHeader">
+<header id="mainHeader">
+    <nav>
         <div id="menuWrapper">
-            <ul id="indexMenu">
-                <!--<a href="#" class="nav=mobile" id="nav-mobile" hidden=""></a>-->
+            <ul class="menu" id="menu">
+                <!--<a href="#" class="nav-mobile" id="nav-mobile"></a>-->
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="">Venta</a>
                     <ul class="submenu">
@@ -28,7 +26,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Reparación</a>
-                    <ul class="submenu" hidden>
+                    <ul class="submenu">
                         <li><a href="#">Sedan</a></li>
                         <li><a href="#">Camioneta</a></li>
                         <li><a href="#">Pick-Up</a></li>
@@ -36,7 +34,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Aduana</a>
-                    <ul class="submenu" hidden="">
+                    <ul class="submenu">
                        <li><a href="#">Sedan</a></li>
                        <li><a href="#">Camioneta</a></li>
                        <li><a href="#">Pick-Up</a></li>
@@ -51,88 +49,53 @@
                 </li>
             </ul>
         </div>
-        <!--<div id="menuWrapper">
-                <ul id="menu">
-                <a href="#" class="nav-mobile" id="nav-mobile"> </a>
-                    <li><a href="index.html">Inicio</a></li>	
-                    <li><a href="venta.html">Venta</a>
-                    <ul>
-                        <li><a href="#">Sedan</a></li>
-                        <li><a href="#">Camioneta</a></li>
-                        <li><a href="#">Pick-Up</a></li>
-                        <li><a href="#">Coupe</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">Reparación</a>
-                    <ul>
-                    <li><a href="#">Sedan</a></li>
-                    <li><a href="#">Camioneta</a></li>
-                    <li><a href="#">Pick-Up</a></li>
-                    <li><a href="#">Coupé</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">En Aduana</a>
-                    <ul>
-                       <li><a href="#">Sedan</a></li>
-                       <li><a href="#">Camioneta</a></li>
-                       <li><a href="#">Pick-Up</a></li>
-                       <li><a href="#">Coupé</a></li>
-                </ul>
-                </li>
-                    <li><a href="#">Contáctenos</a></li>
-                    <li><a href="quienes_somos.html">Quienes Somos</a></li>
-                </ul>
-        </div>-->
-    </header>
-    <div id="banner">
-        <div>
-            <img id="bannerImg" src="images/classic-car.jpg" alt="Autos Flores Escobar" />
-            <!--<h2 id="bannerTitle"><span>Autos Flores Escobar</span></h2>   NECESITO AGREGAR NOMBRE DEL NEGOCIO-->
-        </div>
+    </nav>
+</header>
+<div id="banner">
+    <div>
+        <img id="bannerImg" src="images/classic-car.jpg" alt="Autos Flores Escobar" />
+        <!--<h2 id="bannerTitle"><span>Autos Flores Escobar</span></h2>   NECESITO AGREGAR NOMBRE DEL NEGOCIO-->
     </div>
+</div>
     
-    <!--CONTENIDO DE LA PAGINA-->
-    <div id="container">
-        <section id="cursos">
-            <article>
-                <img src="images/logos/toyota.png" alt="toyota" width="150px" height="150px" />
-
-            </article>
-            <article>
-                <img src="images/logos/nissan.png" alt="nissan" width="150px" height="150px" />
-
-            </article>
-            <article>
-                <img src="images/logos/honda.png" alt="honda" width="150px" height="150px" />
-
-            </article>
-            <article>
-                <img src="images/logos/bmw.png" alt="bmw" width="150px" height="150px" />
-
-            </article>
-            <article>
-                <img src="images/logos/mazda.png" alt="HTML5" width="150px" height="150px" />
-
-            </article>
-            <article>
-                <img src="images/logos/chevy.png" alt="HTML5" width="150px" height="150px" />
-
-            </article>
-            <article>
-                <img src="images/logos/kia.png" alt="HTML5" width="150px" height="150px" />
-
-            </article>
-            <article>
-                <img src="images/logos/ford.jpg" alt="HTML5" width="150px" height="150px" />
-            </article>
-            <article>
-                <img src="images/logos/mitsubishi.png" alt="HTML5" width="150px" height="150px" />
-            </article>
-            <article>
-                <img src="images/logos/hyundai.png" alt="HTML5" width="150px" height="120px" />
-            </article>
-        </section>
-    </div>
+<!--CONTENIDO DE LA PAGINA-->
+<div id="container">
+    
+    <section id="cursos">
+        <article>
+            <img src="images/logos/toyota.png" alt="toyota" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/nissan.png" alt="nissan" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/honda.png" alt="honda" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/bmw.png" alt="bmw" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/mazda.png" alt="HTML5" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/chevy.png" alt="HTML5" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/kia.png" alt="HTML5" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/ford.jpg" alt="HTML5" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/mitsubishi.png" alt="HTML5" width="150px" height="150px" />
+        </article>
+        <article>
+            <img src="images/logos/hyundai.png" alt="HTML5" width="150px" height="120px" />
+        </article>
+    </section>
+    
+</div>
+<!--FIN DEL CONTENIDO DE LA PAGINA-->
 
 <!--SCRIIIIIPTS-->
 <script type="text/javascript" src="js/jquery-latest.js"></script>
@@ -170,7 +133,7 @@
 <script>
 	$(function() {
 	var btn_movil = $('#nav-mobile'),
-		menu = $('#indexMenu').find('ul');
+		menu = $('#menu').find('ul');
 		
 	btn_movil.on('click', function (e) {
 		e.preventDefault();

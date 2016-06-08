@@ -7,9 +7,9 @@
 }
 body{
 	font: 13px/22px helvetica, arial, sans-serif;
-    background: url("../images/fondo1.jpg"),;
-    background-size: cover;
-    background-attachment:fixed;
+    /*background: url("../images/fondo1.jpg"),;*/
+    /*background-size: cover;
+    background-attachment:fixed;*/
 }
 /*estilo general menu*/
 nav ul{
@@ -17,31 +17,37 @@ nav ul{
 	padding: 0px;
 	z-index: 1000;
 	margin: auto;
-}
-nav li{
-	line-height: 3rem;
-	position: relative;
+    background-color: lightseagreen;
 }
 .menu ul{
 	position: absolute;
+    
+}
+nav li{
+    margin: 0;
+    
+	line-height: 3rem;
+	position: relative;
 }
  .menu a{
- 	color: #ddd;
+ 	color: #dddbl;
  	display: block;
  	padding: 0 2.5em; 
  	text-decoration: none;
+    z-index: 1;
  }
   nav a:hover{
   	background:  rgba(0,0,0,.5);
   }
 /*primer nivel menu*/
 .menu{
-	background: #333;
+	
 	display: table;
 	width: 80%;	
 }
 .menu li{
 	float: left;
+    background-color: lightseagreen;
 }
 /*submenu menu*/
 nav li li{
