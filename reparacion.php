@@ -63,12 +63,39 @@
 	</ul>
 	<img src="images/banner_repa.png" id="banner_rentar"/>
 <section id="cursos">
-	<a href="auto1.html"><article>
-		<img src="images/repa/auto1.jpg" alt="" width="120px"/>
-		<p id="p1">Subaru Impreza WRX 2011 EN ADUANA</p>
+<!--****************************************PRIMER CARRO*************************************************** -->
+    
+    <!--Aqui iria la query-->
+    <!--Aqui empezaria -->
+	<a href="auto.php"><article>
+
+      
+        <?php
+        require "config1.php";
+$data = mysql_query("select idProducto, nameProducto from autoproducto");
+while($nt=mysql_fetch_assoc($data)){ $nameProducto=nl2br($nt['nameProducto']);
+echo "<p>$nt[nameProducto]</p>";   
+}?>
+        
+        
+            
+        <img width="150px" src="                                
+<?php 
+ 
+$data = mysql_query("select urlProducto from imgproducto where idProducto='001' and idImg='002'");
+while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
+echo "$nt[urlProducto]";    
+}
+?>  ">
+		<p><?php 
+$data = mysql_query("select nameProducto from autoproducto where idProducto='001'");
+while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
+echo "<p>$nt[nameProducto]</p>";   
+}?>  </p>
 		
 	</article></a>
 	<article>
+    <!--******************************************PRIMER CARRO******************************************** -->
 		<img src="images/repa/auto2.jpg" alt="nissan" width="150px" height="100px" />
 		<p>Honda Civic LX 2012</p>
 	
