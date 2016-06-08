@@ -3,6 +3,9 @@
 	margin: 0;
 }
 /*CSS EXPERIMENTAL DEL MENU*/
+p{
+    text-align: justify;
+}
 #mainHeader{
     height: 10%;
     width: 100%;
@@ -59,6 +62,9 @@
 
 /*BODY AND CONTAINER*/
 #container{
+    padding: 3%;
+    padding-left: 17%;
+    padding-right: 16%;
     display: block;
     position: relative;
     background-color: aliceblue;
@@ -81,9 +87,43 @@
 	-webkit-transition: 2s;
 }
 /*QUIENES SOMOS CSS*/
-#mision{
-    
+#container section{
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
+#container section p li{
+    font-size: 1.5em;
+    line-height: 1.5
+}
+#container section h2{
+    margin: 2%;
+    text-align: center;
+    font-size: 2em;
+    color: darkslategray;
+}
+#quienesSomosTitle{
+    font-size: 3.5em;
+    text-align: center;
+    margin: 5%;
+    color: lightseagreen;
+}
+
+#empresa{   
+}
+#empresa article img{
+    margin-left: 9%;
+    margin-right: 9%;
+    align-content: center;
+}
+
+#mision{}
+#vision{}
+#nuestrosServicios{}
+#nuestrosServicios li{
+    list-style: none;
+}
+
 
 /*DEPRICATED  #p1 {
 	background:  #d7ff9e;
