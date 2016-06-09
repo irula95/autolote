@@ -15,7 +15,7 @@
             <!--<img id="logo" src="images/banner.png" />-->
             <ul class="menu" id="menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="venta.html">Venta</a>
+                <li><a href="venta.php">Venta</a>
                 <ul class="submenu">
                     <li><a href="sedan.php">Sedan</a></li>
                     <li><a href="camioneta.php">Camioneta</a></li>
