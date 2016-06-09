@@ -109,17 +109,19 @@ body
 	font-size: 13px;
 	font-weight: normal;
 	padding: 8px;
-	background: #F87602;
+	background: #9ffffa;
 	border-top: 4px solid #aabcfe;
 	border-bottom: 1px solid #fff;
-	color: #039;
+	color: black;
+    font-weight: bold;
 }
 #box-table-a td
 {
 	padding: 8px;
-	background: #FFA36C; 
+	background: rgb(32, 178, 170); 
 	border-bottom: 1px solid #fff;
-	color: #669;
+	color: #fff;
+    font-weight: bold;
 	border-top: 1px solid transparent;
 }
 #box-table-a tr:hover td

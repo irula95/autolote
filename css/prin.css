@@ -1,132 +1,105 @@
 {
 	margin: 0px;
 	padding: 0px;
--webkit-box-sizing:border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 body{
 	font: 13px/22px helvetica, arial, sans-serif;
-    background: url("../images/fondo1.jpg"),;
-    background-size: cover;
-    background-attachment:fixed;
-  
-   
-    
-
+    /*background: url("../images/fondo1.jpg"),;*/
+    /*background-size: cover;
+    background-attachment:fixed;*/
 }
-
 /*estilo general menu*/
 nav ul{
 	list-style: none;
 	padding: 0px;
 	z-index: 1000;
 	margin: auto;
-}
-nav li{
-	line-height: 3rem;
-	position: relative;
+    background-color: lightseagreen;
 }
 .menu ul{
 	position: absolute;
+    
+}
+nav li{
+    margin: 0;
+    
+	line-height: 3rem;
+	position: relative;
 }
  .menu a{
- 	color: #ddd;
+ 	color: #dddbl;
  	display: block;
  	padding: 0 2.5em; 
  	text-decoration: none;
+    z-index: 1;
  }
   nav a:hover{
   	background:  rgba(0,0,0,.5);
   }
- 
-
 /*primer nivel menu*/
 .menu{
-	background: #333;
+	
 	display: table;
-	width: 80%;
-	
-	
+	width: 80%;	
+  
 }
 .menu li{
 	float: left;
+    left: 30px;
+    background-color: lightseagreen;
+    
 }
-
-/*submenu menu*/
 nav li li{
 	background: #222;
 	max-height: 0;
 	transition: all .5s;
-	overflow: hidden;
-	
-	width: 200px;
-
+	overflow: hidden;	
+	width: auto;
 }
-
 nav li:hover li{
 	max-height: 1000px;
 	overflow: visible;
 }
-
 .menu li ul {
 	top: 100%;
-
 }
 /*slider**************************/
 .main{
-	width: 50%;
+	width: 100%;
 	max-width: 900px;
 	margin: 10px  auto;
-	position: relative;
-
-
-	
+	position: relative;	
 }
-
 .slides{
 	width: 100%;
-
-
 }
- 
  .slides img{
  	width: 100%;
  	height: 100%;
- 	max-height: 900px;
- 	max-width: 900px;
+ 	max-height: 2000px;
+ 	max-width: 2000px;
  }
-
- .slidesjs-pagination{
- 	background: #424242;
+.slidesjs-pagination{
+ 	background: lightseagreen;
  	list-style: none;
  	overflow: hidden;
- 	
-
-
  }
- 
  .slidesjs-pagination li{
  	float: left;
-
-
-
+     
  }
-
  .slidesjs-pagination li a{
  	display: block;
- 	padding: 10px 20px;
+ 	padding: 10px 30px;
  	color: #fff;
  	text-decoration: none;
-
-
-
  }
  .slidesjs-pagination li a:hover{
- 	background:black;
+ 	background:rgb(21, 111, 106);
  }
-
  .slides .active{
  	background:black;
  }
@@ -136,18 +109,12 @@ nav li:hover li{
  	display: inline-block;
  	padding: 25px 20px;
  	float: right;
-
- 	
-
  }
  /****PARTICULAS*********/
  #particles-js{
- 	
  	left: 0%;
  	top:0%;
  	width: 100%;
-
  	position: fixed;
  	background: rgba(0,0,0,.8);
  	}
- 	

@@ -1,15 +1,21 @@
 *{
     margin: 0 auto;
 }
+#bienvenida{
+    font-size: 40px;
+    background-color: #20b2aa;
+    color: white;
+    text-align: center;
+}
 body{
   
     text-align: center;
 }
 header{
-    background: #095090;
+    background: #20b2aa;
     height: 100px;
     line-height: 100px;
-    color: #1BD7A1;
+    color: white;
 }
 
 nav{

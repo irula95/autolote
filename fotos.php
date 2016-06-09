@@ -24,7 +24,8 @@
                             <table id="box-table-a">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                         <th scope="col">Imagen</th>
+                                        <th>ID</th>
                                         <th>ID de Producto</th>
                                         <th>url de imagen</th>
                                          <th>Descripcion</th>
@@ -35,9 +36,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                       
                         <?php
                         while($d = mysql_fetch_array($data)):
                             echo "<tr>";
+                                echo "<td><img height='100px'src =".$d['urlProducto']."></img></td>";
                                 echo "<td>".$d['idImg']."</td>";
                                 echo "<td>".$d['idProducto']."</td>";
                                 echo "<td>".$d['urlProducto']."</td>";
