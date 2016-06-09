@@ -18,15 +18,15 @@
             <ul class="menu" id="menu">
                 <!--<a href="#" class="nav-mobile" id="nav-mobile"></a>-->
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="">Venta</a>
+                <li><a href="venta.php">Venta</a>
                     <ul class="submenu">
-                        <li><a href="#">Sedan</a></li>
+                        <li><a href="sedan.php">Sedan</a></li>
                         <li><a href="#">Camioneta</a></li>
-                        <li><a href="#">Pick-Up</a></li>
+                        <li><a href="pickup.php">Pick-Up</a></li>
                         <li><a href="#">Coupe</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Reparación</a>
+                <li><a href="reparacion.php">Reparación</a>
                     <ul class="submenu">
                         <li><a href="#">Sedan</a></li>
                         <li><a href="#">Camioneta</a></li>
@@ -34,6 +34,7 @@
                         <li><a href="#">Coupé</a></li>
                     </ul>
                 </li>
+                <!--
                 <li><a href="#">Aduana</a>
                     <ul class="submenu">
                        <li><a href="#">Sedan</a></li>
@@ -41,12 +42,15 @@
                        <li><a href="#">Pick-Up</a></li>
                        <li><a href="#">Coupé</a></li>
                     </ul>
-                </li>
+                </li>-->
                 <li>
                     <a href="contactenos.php">Contáctenos</a>
                 </li>
                 <li>
                     <a href="quienes_somos.html">Quiénes Somos</a>
+                </li>
+                <li>
+                    <a href="index.php">Administrador</a>
                 </li>
             </ul>
         </div>
