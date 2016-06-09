@@ -12,7 +12,7 @@
 <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
 </head>
 <body>
-    <header id="mainHeader">
+ <header id="mainHeader">
     <nav>
         <div id="menuWrapper">
             <ul class="menu" id="menu">
@@ -34,6 +34,15 @@
                         <li><a href="#">Coupé</a></li>
                     </ul>
                 </li>
+                <!--
+                <li><a href="#">Aduana</a>
+                    <ul class="submenu">
+                       <li><a href="#">Sedan</a></li>
+                       <li><a href="#">Camioneta</a></li>
+                       <li><a href="#">Pick-Up</a></li>
+                       <li><a href="#">Coupé</a></li>
+                    </ul>
+                </li>-->
                 <li>
                     <a href="contactenos.php">Contáctenos</a>
                 </li>
@@ -47,7 +56,6 @@
         </div>
     </nav>
 </header>
-    
 <div id="container"> 
     <div class="main">
  	<div class="slides">

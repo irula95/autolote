@@ -1,5 +1,6 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
 
+<html>
 <head>
     <title>Flores Escobar</title>
 <meta charset="UTF-8">

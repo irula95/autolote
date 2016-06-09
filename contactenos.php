@@ -58,7 +58,8 @@
 </header>
 
 <div id="container">
-    <h1 id="containerTitle">Contáctenos</h1><br>
+    <img src="images/contactenos.png">
+    <!--<h1 id="containerTitle">Contáctenos</h1><br>-->
     <section>
         <h2>Números  de Teléfono.</h2>
         <article>

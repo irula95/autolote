@@ -62,7 +62,7 @@ p{
     clear: both;
     z-index: -10;
 }
-#banner_rentar{
+#banner_container{
     position: relative;
     height: 50%;
     width: 100%;

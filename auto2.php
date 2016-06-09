@@ -12,7 +12,7 @@
 <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
 </head>
 <body>
-    <header id="mainHeader">
+<header id="mainHeader">
     <nav>
         <div id="menuWrapper">
             <ul class="menu" id="menu">

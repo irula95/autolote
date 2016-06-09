@@ -7,44 +7,47 @@
 <link rel="stylesheet" type="text/css" href="fonts.css">
 	<link rel="stylesheet" href="css/style.css" />
 
-	<title></title>
+	<title>Ventas - Flores Escobar</title>
 </head>
 <body>
-    <header id="mainHeader">
-        <nav>
-            <!--<img id="logo" src="images/banner.png" />-->
+<header id="mainHeader">
+    <nav>
+        <div id="menuWrapper">
             <ul class="menu" id="menu">
+                <!--<a href="#" class="nav-mobile" id="nav-mobile"></a>-->
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="venta.php">Venta</a>
-                <ul class="submenu">
-                    <li><a href="sedan.php">Sedan</a></li>
-                    <li><a href="camioneta.php">Camioneta</a></li>
-                    <li><a href="pickup.php">Pick-Up</a></li>
-                    <li><a href="#">Coupe</a></li>
-                </ul>
+                    <ul class="submenu">
+                        <li><a href="sedan.php">Sedan</a></li>
+                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="pickup.php">Pick-Up</a></li>
+                        <li><a href="#">Coupe</a></li>
+                    </ul>
                 </li>
-                <li><a href="reparacion.html">Reparación</a>
-                    <ul>
+                <li><a href="reparacion.php">Reparación</a>
+                    <ul class="submenu">
                         <li><a href="#">Sedan</a></li>
-                        <li><a href="camioneta.php">Camioneta</a></li>
+                        <li><a href="#">Camioneta</a></li>
                         <li><a href="#">Pick-Up</a></li>
                         <li><a href="#">Coupé</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Contáctenos</a>
+                    <a href="contactenos.php">Contáctenos</a>
                 </li>
-                <li>   
-                    <a href="quienes_somos.html">Quienes Somos</a></li>
+                <li>
+                    <a href="quienes_somos.html">Quiénes Somos</a>
+                </li>
                 <li>
                     <a href="index.php">Administrador</a>
                 </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
     <div id="container"><!--CONTAINER-->
-        <img src="images/banner_venta.png" id="banner_rentar"/>
+        <img src="images/banner_venta.png" id="banner_container"/>
         <section id="cursos">
             <!--****************************************INICIA PRIMER CARRO*************************************************** -->
             <a href="auto3.php"><article>
