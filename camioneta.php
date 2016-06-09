@@ -39,7 +39,7 @@
 
 	<!--****************************************INICIA PRIMER CARRO*************************************************** -->
     
-	<a href="auto3.php"><article>
+	<a href="auto4.php"><article>
 
 
         
@@ -47,13 +47,13 @@
         <img width="150px" height="100px" src="                                
 <?php 
 require "config1.php"; 
-$data = mysql_query("select urlProducto from imgproducto where idProducto='006' and idImg='14'");
+$data = mysql_query("select urlProducto from imgproducto where idProducto='005' and idImg='11'");
 while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
 echo "$nt[urlProducto]";    
 }
 ?>  ">
 		<p><?php 
-$data = mysql_query("select nameProducto from autoproducto where idProducto='006' and estadoProducto='VENTA'");
+$data = mysql_query("select nameProducto from autoproducto where idProducto='005' and estadoProducto='VENTA'");
 while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
 echo "<p>$nt[nameProducto]</p>";   
 }?>  </p>
@@ -112,7 +112,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-        <a href="sedan.php">Sedan</a></li>
+			<li id="pie"><a href="sedan.php">Sedan</a></li>
 		<li><a href="camioneta.php">Camioneta</a></li>
 		<li><a href="pickup.php">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
@@ -123,7 +123,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 			<h3>Acceso Directo</h3>
 		</header>
 		<ul>
-			<li><a href="index.html">Inicio</a></li>
+		<li><a href="index.html">Inicio</a></li>
 			<li><a href="venta.php">Venta</a></li>
 			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>

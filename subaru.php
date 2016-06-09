@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -34,33 +34,31 @@
 		<li><a href="quienes_somos.html">Quienes Somos</a></li>
         <li><a href="index.php">Administrador</a></li>
     </ul>
-	<img src="images/banner_venta.png" id="banner_rentar"/>
+	<img src="images/banner_repa.png" id="banner_rentar"/>
 <section id="cursos">
 
-	<!--****************************************INICIA PRIMER CARRO*************************************************** -->
-    
-	<a href="auto3.php"><article>
-
-
+	<!--****************************************INICIA SEGUNDO CARRO*************************************************** -->
+	<a href="auto.php"><article>
+   
         
-              
-        <img width="150px" height="100px" src="                                
+            
+<img width="150px" height="100px" src="                                
 <?php 
-require "config1.php"; 
-$data = mysql_query("select urlProducto from imgproducto where idProducto='006' and idImg='14'");
+require "config1.php";
+$data = mysql_query("select urlProducto from imgproducto where idProducto='001' and idImg='1'");
 while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
 echo "$nt[urlProducto]";    
 }
 ?>  ">
 		<p><?php 
-$data = mysql_query("select nameProducto from autoproducto where idProducto='006' and estadoProducto='VENTA'");
+$data = mysql_query("select nameProducto from autoproducto where idProducto='001'");
 while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
 echo "<p>$nt[nameProducto]</p>";   
 }?>  </p>
 		
 	</article></a>
-    <!--****************************************FINALIZA PRIMER CARRO*************************************************** -->
-   
+	
+<!--****************************************FINALIZA SEGUNDO CARRO*************************************************** -->
 </section>
 
 <script type="text/javascript" src="js/jquery-latest.js"></script>
@@ -112,7 +110,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-        <a href="sedan.php">Sedan</a></li>
+	<a href="sedan.php">Sedan</a></li>
 		<li><a href="camioneta.php">Camioneta</a></li>
 		<li><a href="pickup.php">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
@@ -123,7 +121,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 			<h3>Acceso Directo</h3>
 		</header>
 		<ul>
-			<li><a href="index.html">Inicio</a></li>
+		<li><a href="index.html">Inicio</a></li>
 			<li><a href="venta.php">Venta</a></li>
 			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
@@ -136,3 +134,5 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 <p id="copyright">Derechos Reservados © 2015–2016 Flores Escobar S.A de C.V, San Miguel, El Salvador</p>
 </footer>
 </html>
+
+

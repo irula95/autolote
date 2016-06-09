@@ -10,6 +10,7 @@
 	<title></title>
 </head>
 <body>
+<<<<<<< HEAD
     <header id="mainHeader">
         <nav>
             <!--<img id="logo" src="images/banner.png" />-->
@@ -66,6 +67,35 @@
             <!--****************************************FINALIZA PRIMER CARRO*************************************************** -->
             <!--****************************************INICIA SEGUNDO CARRO*************************************************** -->
             <a href="auto4.php"><article>
+=======
+<nav>
+<img id="logo" src="images/banner.png" />
+	<ul class="menu">
+		<li><a href="index.html">Inicio</a></li>
+		<li><a href="venta.php">Venta</a>
+		<ul>
+			<li><a href="sedan.php">Sedan</a></li>
+			<li><a href="camioneta.php">Camioneta</a></li>
+			<li><a href="pickup.php">Pick-Up</a></li>
+			<li><a href="#">Coupe</a></li>
+		</ul>
+		</li>
+		<li><a href="reparacion.php">Reparación</a>
+		<ul>
+		<li><a href="#">Sedan</a></li>
+		<li><a href="camioneta.php">Camioneta</a></li>
+		<li><a href="#">Pick-Up</a></li>
+		<li><a href="#">Coupé</a></li>
+		</ul>
+		</li>
+		<li><a href="contactenos.php">Contáctenos</a></li>
+		<li><a href="quienes_somos.html">Quienes Somos</a></li>
+        <li><a href="index.php">Administrador</a></li>
+    </ul>
+		
+	<img src="images/banner_venta.png" id="banner_rentar"/>
+<section id="cursos">
+>>>>>>> refs/remotes/origin/master
 
 
 
@@ -179,9 +209,9 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-		<li id="pie"><a href="#">Sedan</a></li>
-		<li><a href="#">Camioneta</a></li>
-		<li><a href="#">Pick-Up</a></li>
+        <a href="sedan.php">Sedan</a></li>
+		<li><a href="camioneta.php">Camioneta</a></li>
+		<li><a href="pickup.php">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
 	</ul>
 	</section>
@@ -190,11 +220,11 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 			<h3>Acceso Directo</h3>
 		</header>
 		<ul>
-			<li><a href="index.html">Inicio</a></li>
-			<li><a href="venta.html">Venta</a></li>
-			<li><a href="reparacion.html">Reparación</a></li>
+		<li><a href="index.html">Inicio</a></li>
+			<li><a href="venta.php">Venta</a></li>
+			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
-			<li><a href="#">Contactenos</a></li>
+			<li><a href="contactenos.php">Contactenos</a></li>
 		</ul>
 	</section>
 	
