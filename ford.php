@@ -10,31 +10,42 @@
 	<title></title>
 </head>
 <body>
-<nav>
-<img id="logo" src="images/banner.png" />
-	<ul class="menu">
-		<li><a href="index.html">Inicio</a></li>
-		<li><a href="venta.php">Venta</a>
-		<ul>
-			<li><a href="sedan.php">Sedan</a></li>
-			<li><a href="camioneta.php">Camioneta</a></li>
-			<li><a href="pickup.php">Pick-Up</a></li>
-			<li><a href="#">Coupe</a></li>
-		</ul>
-		</li>
-		<li><a href="reparacion.php">Reparación</a>
-		<ul>
-		<li><a href="#">Sedan</a></li>
-		<li><a href="camioneta.php">Camioneta</a></li>
-		<li><a href="#">Pick-Up</a></li>
-		<li><a href="#">Coupé</a></li>
-		</ul>
-		</li>
-		<li><a href="contactenos.php">Contáctenos</a></li>
-		<li><a href="quienes_somos.html">Quienes Somos</a></li>
-        <li><a href="index.php">Administrador</a></li>
-    </ul>
-	<img src="images/banner_repa.png" id="banner_rentar"/>
+<header id="mainHeader">
+    <nav>
+        <div id="menuWrapper">
+            <ul class="menu" id="menu">
+                <!--<a href="#" class="nav-mobile" id="nav-mobile"></a>-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="venta.php">Venta</a>
+                    <ul class="submenu">
+                        <li><a href="sedan.php">Sedan</a></li>
+                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="pickup.php">Pick-Up</a></li>
+                        <li><a href="#">Coupe</a></li>
+                    </ul>
+                </li>
+                <li><a href="reparacion.php">Reparación</a>
+                    <ul class="submenu">
+                        <li><a href="#">Sedan</a></li>
+                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="#">Pick-Up</a></li>
+                        <li><a href="#">Coupé</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contactenos.php">Contáctenos</a>
+                </li>
+                <li>
+                    <a href="quienes_somos.html">Quiénes Somos</a>
+                </li>
+                <li>
+                    <a href="index.php">Administrador</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <div id="container">
 <section id="cursos">
 
 	<!--****************************************INICIA SEGUNDO CARRO*************************************************** -->
@@ -60,6 +71,7 @@ echo "<p>$nt[nameProducto]</p>";
 	
 <!--****************************************FINALIZA SEGUNDO CARRO*************************************************** -->
 </section>
+        </div>
 
 <script type="text/javascript" src="js/jquery-latest.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>

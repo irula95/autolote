@@ -68,7 +68,6 @@ p{
     width: 100%;
 	display: block;
     clear: both;
-    
 }
 
 /*BODY AND CONTAINER*/
@@ -291,6 +290,16 @@ footer ul li a {
 }
 
 @media only screen and (max-width: 768px) {
+    #container{
+    display: block;
+    position: relative;
+    background-color: aliceblue;
+}
+    #cursos{
+    margin-left: 0;
+    margin-right: 0%;
+    background-color: aliceblue;
+}
 	h2{
 		font-size: 40px;
 	}
@@ -337,4 +346,10 @@ footer ul li a {
 		-o-transition: max-height .4s;
 		transition: max-height .4s;
 	}
+    footer section{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        clear: both;
+        float: left;
+    }
 }
