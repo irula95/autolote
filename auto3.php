@@ -1,55 +1,54 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Flores Escobar</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, intial-scale=1">
+<link rel="stylesheet" text="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/prin.css">
 <link rel="stylesheet" type="text/css" href="fonts.css">
-<link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="estilocomentarios.css"  />
 <script type="text/javascript" src="js/jquery-1.3.2.min.js" ></script>
 <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
 </head>
 <body>
-    <header>
-<nav>
-<img id="logo" src="images/banner.png" />
-	<ul class="menu" id="menu">
-
-	<a href="#" class="nav-mobile" id="nav-mobile"> </a>
-	
-		<li><a href="index.html">Inicio</a></li>
-		
-		<li><a href="venta.php">Venta</a>
-		<ul>
-			<li><a href="sedan.php">Sedan</a></li>
-			<li><a href="camioneta.php">Camioneta</a></li>
-			<li><a href="pickup.php">Pick-Up</a></li>
-			<li><a href="#">Coupe</a></li>
-		</ul>
-		</li>
-		<li><a href="reparacion.php">Reparación</a>
-		<ul>
-		<li><a href="#">Sedan</a></li>
-		<li><a href="camioneta.php">Camioneta</a></li>
-		<li><a href="#">Pick-Up</a></li>
-		<li><a href="#">Coupé</a></li>
-		</ul>
-		</li>
-		<li><a href="contactenos.php">Contáctenos</a></li>
-		<li><a href="quienes_somos.html">Quienes Somos</a></li>
-        <li><a href="index.php">Administrador</a></li>
-    </ul>
-  
-   
-</nav>
- </header>
-<br>
-    <div id="content"> 
-
-    
-    
- <div class="main">
+<header id="mainHeader">
+    <nav>
+        <div id="menuWrapper">
+            <ul class="menu" id="menu">
+                <!--<a href="#" class="nav-mobile" id="nav-mobile"></a>-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="venta.php">Venta</a>
+                    <ul class="submenu">
+                        <li><a href="sedan.php">Sedan</a></li>
+                        <li><a href="camioneta.php">Camioneta</a></li>
+                        <li><a href="pickup.php">Pick-Up</a></li>
+                        <li><a href="#">Coupe</a></li>
+                    </ul>
+                </li>
+                <li><a href="reparacion.php">Reparación</a>
+                    <ul class="submenu">
+                        <li><a href="#">Sedan</a></li>
+                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="#">Pick-Up</a></li>
+                        <li><a href="#">Coupé</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contactenos.php">Contáctenos</a>
+                </li>
+                <li>
+                    <a href="quienes_somos.html">Quiénes Somos</a>
+                </li>
+                <li>
+                    <a href="index.php">Administrador</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div id="container"> 
+    <div class="main">
  	<div class="slides">
      
    <!--****************EL ARCHIVO config1.php HACE LA CONEXION CON LA BD*******************-->
@@ -201,7 +200,6 @@ echo "<p='info_titulo'>$nt[descripcionProducto]</p>";
 
 </script>
 </body>
-<br />
 	<footer>
 <div>
 	<section id="about">
