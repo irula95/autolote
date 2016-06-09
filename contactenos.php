@@ -12,118 +12,157 @@
 <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
 </head>
 <body>
-    <header>
-<nav>
-<img id="logo" src="images/banner.png" />
-	<ul class="menu" id="menu">
+<header id="mainHeader">
+    <nav>
+        <div id="menuWrapper">
+            <ul class="menu" id="menu">
+                <!--<a href="#" class="nav-mobile" id="nav-mobile"></a>-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Venta</a>
+                    <ul class="submenu">
+                        <li><a href="#">Sedan</a></li>
+                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="#">Pick-Up</a></li>
+                        <li><a href="#">Coupe</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Reparación</a>
+                    <ul class="submenu">
+                        <li><a href="#">Sedan</a></li>
+                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="#">Pick-Up</a></li>
+                        <li><a href="#">Coupé</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Aduana</a>
+                    <ul class="submenu">
+                       <li><a href="#">Sedan</a></li>
+                       <li><a href="#">Camioneta</a></li>
+                       <li><a href="#">Pick-Up</a></li>
+                       <li><a href="#">Coupé</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contactenos.php">Contáctenos</a>
+                </li>
+                <li>
+                    <a href="quienes_somos.html">Quiénes Somos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-	<a href="#" class="nav-mobile" id="nav-mobile"> </a>
-	
-		<li><a href="index.html">Inicio</a></li>
-		
-		<li><a href="venta.php">Venta</a>
-		<ul>
-			<li><a href="sedan.php">Sedan</a></li>
-			<li><a href="#">Camioneta</a></li>
-			<li><a href="pickup.php">Pick-Up</a></li>
-			<li><a href="#">Coupe</a></li>
-		</ul>
-		</li>
-		<li><a href="reparacion.php">Reparación</a>
-		<ul>
-		<li><a href="#">Sedan</a></li>
-		<li><a href="#">Camioneta</a></li>
-		<li><a href="#">Pick-Up</a></li>
-		<li><a href="#">Coupé</a></li>
-		</ul>
-		</li>
-		<li><a href="contactenos.php">Contáctenos</a></li>
-		<li><a href="quienes_somos.html">Quienes Somos</a></li>
-        <li><a href="index.php">Administrador</a></li>
-    </ul>
-  
-   
-</nav>
- </header>
-<br>
-    <div id="content">
+<div id="container">
+    <h1 id="containerTitle">Contáctenos</h1><br>
+    <section>
+        <h2>Números  de Teléfono.</h2>
+        <article>
+            <p>EEUU</p>
+            <p>01 800 755 696</p>
+            <br>
+            <p>El Salvador</p>
+            <p>7582-6960</p>
+            <br>
+        </article>
+    </section>
+    <section>
+        <h2>Direcciones.</h2>
+        <br>
+        <article>
+        <p>Fith Avenue New York</p>
+        <br>
+        </article>
+    </section>
+    <section> 
+        <h2>Contáctenos vía web.</h2>
+         <?php
+        $actualiza="<META HTTP-EQUIV='Refresh' CONTENT='1; URL=contactenos.php'>";//actualizamos la pagina
+        $q=mysql_query("select name, comentarios,fecha from comentarios where  estado='OK' order by fecha ASC ");
+        while($nt=mysql_fetch_array($q)){ $comentarios=nl2br($nt['comentarios']);
+        echo "<li>";
+        echo "<div>";
 
-
+        echo "<h3> ".date("d-M-y",strtotime($nt['fecha']))."</h3>";
+        echo "<h2><strong>$nt[name]</strong></h2>";                         
+        echo "</div>";
+        echo "<h2>$comentarios</h2>";
+        }
+        echo"</li>";
+        ?>
+    
         <?php
-$actualiza="<META HTTP-EQUIV='Refresh' CONTENT='1; URL=contactenos.php'>";//actualizamos la pagina
-$q=mysql_query("select name, comentarios,fecha from comentarios where  estado='OK' order by fecha ASC ");
-while($nt=mysql_fetch_array($q)){ $comentarios=nl2br($nt['comentarios']);
-echo "<li>";
-echo "<div>";
+        $publicado="Publicado";
+        require "config.php";
+        ?>
+        <?php
+        @$todo=$_POST['todo'];
+        if(isset($todo) and $todo=="post_comment"){
 
-echo "<h3> ".date("d-M-y",strtotime($nt['fecha']))."</h3>";
-echo "<h2><strong>$nt[name]</strong></h2>";                         
-echo "</div>";
-echo "<h2>$comentarios</h2>";
-}
-echo"</li>";
+        $name=$_POST['name'];
+        $name=mysql_real_escape_string($name);
+        $email=$_POST['email'];
+        $email=mysql_real_escape_string($email);
+        $comentarios=$_POST['comentarios'];
+        $comentarios=mysql_real_escape_string($comentarios);
+        $estado = "OK";
+        $msg="";
 
-?>
-<?php
-$publicado="Publicado";
-require "config.php";
-?>
-<?php
-@$todo=$_POST['todo'];
-if(isset($todo) and $todo=="post_comment"){
+        if( strlen($name) <3 or strlen($name) > 25){
+        $msg=$msg."Su nombre debe tener más de 3 caracteres y menos de 25. <BR>";
+        $estado= "NOTOK";}                  
 
-$name=$_POST['name'];
-$name=mysql_real_escape_string($name);
-$email=$_POST['email'];
-$email=mysql_real_escape_string($email);
-$comentarios=$_POST['comentarios'];
-$comentarios=mysql_real_escape_string($comentarios);
-$estado = "OK";
-$msg="";
-
-if( strlen($name) <3 or strlen($name) > 25){
-$msg=$msg."Su nombre debe tener más de 3 caracteres y menos de 25. <BR>";
-$estado= "NOTOK";}                  
-
-if( strlen($comentarios) <3 ){
-$msg=$msg."Su comentario debe tener más de 3 caracteres por lo menos.<BR>";
-$estado= "NOTOK";}  
-//****************************
-if(!eregi("^[a-z0-9]+([_\\.-][a-z0-9]+)*" ."@"."([a-z0-9]+([\.-][a-z0-9]+)*)+"."\\.[a-z]{2,}"."$",$email)){
-$msg=$msg."Su email, no es correcto.<BR>";
-$estado= "NOTOK";}          
-//****************************
+        if( strlen($comentarios) <3 ){
+        $msg=$msg."Su comentario debe tener más de 3 caracteres por lo menos.<BR>";
+        $estado= "NOTOK";}  
+        //****************************
+        if(!eregi("^[a-z0-9]+([_\\.-][a-z0-9]+)*" ."@"."([a-z0-9]+([\.-][a-z0-9]+)*)+"."\\.[a-z]{2,}"."$",$email)){
+        $msg=$msg."Su email, no es correcto.<BR>";
+        $estado= "NOTOK";}          
+        //****************************
 
 
-if($estado<>"OK"){ 
-echo "$msg";
-}else{
-$fecha=date("Y-m-d"); 
-$estado='NO'; //Validar comentarios
-$query=mysql_query("insert into comentarios(publicado,fecha,name,email,comentarios,estado) values('$publicado','$fecha','$name','$email','$comentarios','$estado')");
-echo mysql_error();
-echo "Gracias por contactarnos le responderemos pronto. <br>".$actualiza;
-}
-}
+        if($estado<>"OK"){ 
+        echo "$msg";
+        }else{
+        $fecha=date("Y-m-d"); 
+        $estado='NO'; //Validar comentarios
+        $query=mysql_query("insert into comentarios(publicado,fecha,name,email,comentarios,estado) values('$publicado','$fecha','$name','$email','$comentarios','$estado')");
+        echo mysql_error();
+        echo "Gracias por contactarnos le responderemos pronto. <br>".$actualiza;
+        }
+        }
 
-?>
-<div class="CASILLAS">
-<?php
-echo "<form method=post action=''><input type=hidden name=todo value=post_comment><span class='EstiloROJO'>* </span>
-Nombre:  <br /><input name=name type=text class='fondocasillausuario' size='42'>
-<br />
-<input type=hidden name=id />
-<span class='EstiloROJO'>* </span>E-mail 
-(No saldrá publicado):  <br /><input name=email type=text class='fondocasillausuario' size='42'>
-<br />
-<span class='EstiloROJO'>* </span>Comentarios:  <br />
-<textarea name=comentarios cols=40 rows=3 class='fondocasillausuario'></textarea><br /><br />
-<input type='reset' class='BOTONcomentarioborrar' value='    Borrar    '>
-  <input type=submit class='BOTONcomentarioenviar' value='   Publicar   '>
-</form>";
-?>
-</div>
+        ?>
+    <div class="CASILLAS">
+    <?php
+    echo "<form method=post action=''><input type=hidden name=todo value=post_comment><span class='EstiloROJO'>* </span>
+    Nombre:  <br /><input name=name type=text class='fondocasillausuario' size='42'>
+    <br />
+    <input type=hidden name=id />
+    <span class='EstiloROJO'>* </span>E-mail 
+    (No saldrá publicado):  <br /><input name=email type=text class='fondocasillausuario' size='42'>
+    <br />
+    <span class='EstiloROJO'>* </span>Comentarios:  <br />
+    <textarea name=comentarios cols=40 rows=3 class='fondocasillausuario'></textarea><br /><br />
+    <input type='reset' class='BOTONcomentarioborrar' value='    Borrar    '>
+      <input type=submit class='BOTONcomentarioenviar' value='   Publicar   '>
+    </form>";
+    ?>
+    </section>
+
+DIRECCION
+CONTACTENOS VIA WEB
+
+FORMULARIO 
+
+BOTONES -->
+
+   
     </div>
+
+</div>
+    <!--FIN DEL CONTAINER-->
         
    
     
@@ -195,9 +234,9 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-		<li id="pie"><a href="sedan.php">Sedan</a></li>
+		<li id="pie"><a href="#">Sedan</a></li>
 		<li><a href="#">Camioneta</a></li>
-		<li><a href="pickup.php">Pick-Up</a></li>
+		<li><a href="#">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
 	</ul>
 	</section>
@@ -207,10 +246,10 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		</header>
 		<ul>
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="venta.php">Venta</a></li>
-			<li><a href="reparacion.php">Reparación</a></li>
+			<li><a href="venta.html">Venta</a></li>
+			<li><a href="reparacion.html">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
-			<li><a href="contactenos.php">Contactenos</a></li>
+			<li><a href="#">Contactenos</a></li>
 		</ul>
 	</section>
 	
