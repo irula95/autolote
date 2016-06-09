@@ -20,7 +20,7 @@
 	
 		<li><a href="index.html">Inicio</a></li>
 		
-		<li><a href="venta.html">Venta</a>
+		<li><a href="venta.php">Venta</a>
 		<ul>
 			<li><a href="sedan.php">Sedan</a></li>
 			<li><a href="camioneta.php">Camioneta</a></li>

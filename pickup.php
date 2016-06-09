@@ -34,10 +34,6 @@
 		<li><a href="quienes_somos.html">Quienes Somos</a></li>
         <li><a href="index.php">Administrador</a></li>
     </ul>
-		</li>
-		<li><a href="#">Contáctenos</a></li>
-		<li><a href="quienes_somos.html">Quienes Somos</a></li>
-	</ul>
 	<img src="images/banner_venta.png" id="banner_rentar"/>
 <section id="cursos">
 

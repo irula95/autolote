@@ -14,7 +14,7 @@
 <img id="logo" src="images/banner.png" />
 	<ul class="menu">
 		<li><a href="index.html">Inicio</a></li>
-		<li><a href="venta.html">Venta</a>
+		<li><a href="venta.php">Venta</a>
 		<ul>
 			<li><a href="#">Sedan</a></li>
 			<li><a href="camioneta.php">Camioneta</a></li>
@@ -22,7 +22,7 @@
 			<li><a href="#">Coupe</a></li>
 		</ul>
 		</li>
-		<li><a href="reparacion.html">Reparación</a>
+		<li><a href="reparacion.php">Reparación</a>
 		<ul>
 		<li><a href="#">Sedan</a></li>
 		<li><a href="camioneta.php">Camioneta</a></li>
@@ -213,8 +213,8 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		</header>
 		<ul>
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="venta.html">Venta</a></li>
-			<li><a href="reparacion.html">Reparación</a></li>
+			<li><a href="venta.php">Venta</a></li>
+			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
 			<li><a href="#">Contactenos</a></li>
 		</ul>
