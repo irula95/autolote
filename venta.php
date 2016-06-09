@@ -16,9 +16,9 @@
 		<li><a href="index.html">Inicio</a></li>
 		<li><a href="venta.php">Venta</a>
 		<ul>
-			<li><a href="#">Sedan</a></li>
+			<li><a href="sedan.php">Sedan</a></li>
 			<li><a href="camioneta.php">Camioneta</a></li>
-			<li><a href="#">Pick-Up</a></li>
+			<li><a href="pickup.php">Pick-Up</a></li>
 			<li><a href="#">Coupe</a></li>
 		</ul>
 		</li>
@@ -27,40 +27,14 @@
 		<li><a href="#">Sedan</a></li>
 		<li><a href="camioneta.php">Camioneta</a></li>
 		<li><a href="#">Pick-Up</a></li>
-		<li><a href="#">Coupe</a></li>
+		<li><a href="#">Coupé</a></li>
 		</ul>
 		</li>
-		<li><a href="#">En Aduana</a>
-		<ul>
-			
-		   <li><a href="#">Sedan</a></li>
-		   <li><a href="camioneta.php">Camioneta</a></li>
-		   <li><a href="#">Pick-Up</a></li>
-		   <li><a href="#">Coupe</a></li>
-
-	</ul>
-	</li>
-	<li><a href="#">Marcas</a>
-			<ul>
-				
-			   <li><a href="#">BMW</a></li>
-			   <li><a href="#">CHEVROLET</a></li>
-			   <li><a href="#">FORD</a></li>
-			   <li><a href="#">GMC</a></li>
-			   <li><a href="#">HONDA</a></li>
-			   <li><a href="#">HYUNDAI</a></li>
-			   <li><a href="#">KIA</a></li>
-			   <li><a href="#">MAZDA</a></li>
-			   <li><a href="#">MITSUBISHI</a></li>
-			   <li><a href="#">NISSAN</a></li>
-			   <li><a href="#">SUZUKI</a></li>
-			   <li><a href="#">TOYOTA</a></li>
-	
-		</ul>
-		</li>
-		<li><a href="#">Contáctenos</a></li>
+		<li><a href="contactenos.php">Contáctenos</a></li>
 		<li><a href="quienes_somos.html">Quienes Somos</a></li>
-	</ul>
+        <li><a href="index.php">Administrador</a></li>
+    </ul>
+		
 	<img src="images/banner_venta.png" id="banner_rentar"/>
 <section id="cursos">
 
@@ -201,9 +175,9 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-		<li id="pie"><a href="#">Sedan</a></li>
+        <a href="sedan.php">Sedan</a></li>
 		<li><a href="camioneta.php">Camioneta</a></li>
-		<li><a href="#">Pick-Up</a></li>
+		<li><a href="pickup.php">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
 	</ul>
 	</section>
@@ -212,11 +186,11 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 			<h3>Acceso Directo</h3>
 		</header>
 		<ul>
-			<li><a href="index.html">Inicio</a></li>
+		<li><a href="index.html">Inicio</a></li>
 			<li><a href="venta.php">Venta</a></li>
 			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
-			<li><a href="#">Contactenos</a></li>
+			<li><a href="contactenos.php">Contactenos</a></li>
 		</ul>
 	</section>
 	
