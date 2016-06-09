@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flores Escobar</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, intial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/prin.css">
 <link rel="stylesheet" type="text/css" href="fonts.css">
-<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<title></title>
 </head>
 <body>
-    <header>
 <nav>
 <img id="logo" src="images/banner.png" />
-	<ul class="menu" id="menu">
-
-	<a href="#" class="nav-mobile" id="nav-mobile"> </a>
-	
+	<ul class="menu">
 		<li><a href="index.html">Inicio</a></li>
 		<li><a href="venta.php">Venta</a>
 		<ul>
@@ -37,49 +34,33 @@
 		<li><a href="quienes_somos.html">Quienes Somos</a></li>
         <li><a href="index.php">Administrador</a></li>
     </ul>
-  
-   
-</nav>
- </header>
-<br>
+	<img src="images/banner_venta.png" id="banner_rentar"/>
 <section id="cursos">
-	<article>
-		<img src="images/logos/toyota.png" alt="toyota" width="150px" height="150px" />
-		
-	</article>
-	<article>
-		<img src="images/logos/nissan.png" alt="nissan" width="150px" height="150px" />
-	
-	</article>
-	<article>
-		<img src="images/logos/honda.png" alt="honda" width="150px" height="150px" />
-		
-	</article>
-	<article>
-		<img src="images/logos/bmw.png" alt="bmw" width="150px" height="150px" />
-		
-	</article>
-	<article>
-		<img src="images/logos/mazda.png" alt="HTML5" width="150px" height="150px" />
-		
-	</article>
-	<article>
-		<img src="images/logos/chevy.png" alt="HTML5" width="150px" height="150px" />
 
-	</article>
-	<article>
-		<img src="images/logos/kia.png" alt="HTML5" width="150px" height="150px" />
+	<!--****************************************INICIA PRIMER CARRO*************************************************** -->
+    
+	<a href="auto3.php"><article>
 
-	</article>
-	<article>
-		<img src="images/logos/ford.jpg" alt="HTML5" width="150px" height="150px" />
-	</article>
-	<article>
-		<img src="images/logos/mitsubishi.png" alt="HTML5" width="150px" height="150px" />
-	</article>
-	<article>
-		<img src="images/logos/hyundai.png" alt="HTML5" width="150px" height="120px" />
-	</article>
+
+        
+              
+        <img width="150px" height="100px" src="                                
+<?php 
+require "config1.php"; 
+$data = mysql_query("select urlProducto from imgproducto where idProducto='004' and idImg='8'");
+while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
+echo "$nt[urlProducto]";    
+}
+?>  ">
+		<p><?php 
+$data = mysql_query("select nameProducto from autoproducto where idProducto='004' and estadoProducto='VENTA'");
+while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
+echo "<p>$nt[nameProducto]</p>";   
+}?>  </p>
+		
+	</article></a>
+    <!--****************************************FINALIZA PRIMER CARRO*************************************************** -->
+   
 </section>
 
 <script type="text/javascript" src="js/jquery-latest.js"></script>
@@ -112,26 +93,8 @@
 });
 
 </script>
-<script src="js/jquery.js"></script>
-<script>
-
-	$(function() {
-	var btn_movil = $('#nav-mobile'),
-		menu = $('#menu').find('ul');
-		
-	btn_movil.on('click', function (e) {
-		e.preventDefault();
-		
-		var el = $(this);
-		
-		el.toggleClass('nav-active');
-		menu.toggleClass('open-menu');
-		})
-	});
-</script>
-
 </body>
-	<footer>
+<footer>
 <div>
 	<section id="about">
 	    <header>
@@ -149,7 +112,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-		<li id="pie"><a href="sedan.php">Sedan</a></li>
+			<li id="pie"><a href="sedan.php">Sedan</a></li>
 		<li><a href="#">Camioneta</a></li>
 		<li><a href="pickup.php">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
@@ -160,7 +123,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 			<h3>Acceso Directo</h3>
 		</header>
 		<ul>
-			<li><a href="index.html">Inicio</a></li>
+		<li><a href="index.html">Inicio</a></li>
 			<li><a href="venta.php">Venta</a></li>
 			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
@@ -170,7 +133,6 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 	
 </div>
 <a href="#"><img id="social"src="images/facebook.png" alt="" /></a>
-
 <p id="copyright">Derechos Reservados © 2015–2016 Flores Escobar S.A de C.V, San Miguel, El Salvador</p>
 </footer>
 </html>

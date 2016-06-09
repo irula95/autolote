@@ -21,15 +21,15 @@
 	
 		<li><a href="index.html">Inicio</a></li>
 		
-		<li><a href="venta.html">Venta</a>
+		<li><a href="venta.php">Venta</a>
 		<ul>
-			<li><a href="#">Sedan</a></li>
+			<li><a href="sedan.php">Sedan</a></li>
 			<li><a href="#">Camioneta</a></li>
-			<li><a href="#">Pick-Up</a></li>
+			<li><a href="pickup.php">Pick-Up</a></li>
 			<li><a href="#">Coupe</a></li>
 		</ul>
 		</li>
-		<li><a href="#">Reparación</a>
+		<li><a href="reparacion.php">Reparación</a>
 		<ul>
 		<li><a href="#">Sedan</a></li>
 		<li><a href="#">Camioneta</a></li>
@@ -37,18 +37,9 @@
 		<li><a href="#">Coupé</a></li>
 		</ul>
 		</li>
-		<li><a href="#">En Aduana</a>
-		<ul>
-			
-		   <li><a href="#">Sedan</a></li>
-		   <li><a href="#">Camioneta</a></li>
-		   <li><a href="#">Pick-Up</a></li>
-		   <li><a href="#">Coupe</a></li>
-
-	</ul>
-	</li>
-		<li><a href="#">Contáctenos</a></li>
+		<li><a href="contactenos.php">Contáctenos</a></li>
 		<li><a href="quienes_somos.html">Quienes Somos</a></li>
+        <li><a href="index.php">Administrador</a></li>
     </ul>
   
    
@@ -56,15 +47,7 @@
  </header>
 <br>
     <div id="content">
-<!-- <H1>CONTACTENOS</H1>	
-NUMEROS DE TELEFONO
 
-DIRECCION
-CONTACTENOS VIA WEB
-
-FORMULARIO 
-
-BOTONES -->
 
         <?php
 $actualiza="<META HTTP-EQUIV='Refresh' CONTENT='1; URL=contactenos.php'>";//actualizamos la pagina
@@ -212,9 +195,9 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-		<li id="pie"><a href="#">Sedan</a></li>
+		<li id="pie"><a href="sedan.php">Sedan</a></li>
 		<li><a href="#">Camioneta</a></li>
-		<li><a href="#">Pick-Up</a></li>
+		<li><a href="pickup.php">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
 	</ul>
 	</section>
@@ -224,10 +207,10 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		</header>
 		<ul>
 			<li><a href="index.html">Inicio</a></li>
-			<li><a href="venta.html">Venta</a></li>
-			<li><a href="reparacion.html">Reparación</a></li>
+			<li><a href="venta.php">Venta</a></li>
+			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
-			<li><a href="#">Contactenos</a></li>
+			<li><a href="contactenos.php">Contactenos</a></li>
 		</ul>
 	</section>
 	

@@ -1,0 +1,46 @@
+*{
+    margin: 0 auto;
+}
+body{
+  
+    text-align: center;
+}
+header{
+    background: #095090;
+    height: 100px;
+    line-height: 100px;
+    color: #1BD7A1;
+}
+
+nav{
+    max-width: 90%;
+    min-width: 240px;
+    margin-top: 10px;
+}
+nav ul{
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    max-width: 240px;
+    border: 5px solid #E13F32;
+    border-radius: 5px;
+}
+
+nav ul li:hover{
+    background: #333F4F;
+    cursor: pointer;
+}
+
+nav ul li div{
+    color : #FFFFFF;
+    font-weight: bold;
+}
+section{
+    text-align: center;
+    margin: 0 auto;
+}
+#system a{
+    margin: 5px;
+}
