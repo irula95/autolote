@@ -17,7 +17,7 @@
 		<li><a href="venta.html">Venta</a>
 		<ul>
 			<li><a href="#">Sedan</a></li>
-			<li><a href="#">Camioneta</a></li>
+			<li><a href="camioneta.php">Camioneta</a></li>
 			<li><a href="#">Pick-Up</a></li>
 			<li><a href="#">Coupe</a></li>
 		</ul>
@@ -25,7 +25,7 @@
 		<li><a href="reparacion.html">Reparación</a>
 		<ul>
 		<li><a href="#">Sedan</a></li>
-		<li><a href="#">Camioneta</a></li>
+		<li><a href="camioneta.php">Camioneta</a></li>
 		<li><a href="#">Pick-Up</a></li>
 		<li><a href="#">Coupe</a></li>
 		</ul>
@@ -34,7 +34,7 @@
 		<ul>
 			
 		   <li><a href="#">Sedan</a></li>
-		   <li><a href="#">Camioneta</a></li>
+		   <li><a href="camioneta.php">Camioneta</a></li>
 		   <li><a href="#">Pick-Up</a></li>
 		   <li><a href="#">Coupe</a></li>
 
@@ -202,7 +202,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 	</header>
 	<ul id="pie">
 		<li id="pie"><a href="#">Sedan</a></li>
-		<li><a href="#">Camioneta</a></li>
+		<li><a href="camioneta.php">Camioneta</a></li>
 		<li><a href="#">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
 	</ul>

@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flores Escobar</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, intial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/prin.css">
 <link rel="stylesheet" type="text/css" href="fonts.css">
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="estilocomentarios.css"  />
-<script type="text/javascript" src="js/jquery-1.3.2.min.js" ></script>
-<script type="text/javascript" src="js/jquery-ui.min.js" ></script>
+	<link rel="stylesheet" href="css/style.css" />
+
+	<title></title>
 </head>
 <body>
-    <header>
 <nav>
 <img id="logo" src="images/banner.png" />
-	<ul class="menu" id="menu">
-
-	<a href="#" class="nav-mobile" id="nav-mobile"> </a>
-	
+	<ul class="menu">
 		<li><a href="index.html">Inicio</a></li>
-		
 		<li><a href="venta.php">Venta</a>
 		<ul>
 			<li><a href="sedan.php">Sedan</a></li>
@@ -41,77 +34,34 @@
 		<li><a href="quienes_somos.html">Quienes Somos</a></li>
         <li><a href="index.php">Administrador</a></li>
     </ul>
-  
-   
-</nav>
- </header>
-<br>
-    <div id="content">
+	<img src="images/banner_venta.png" id="banner_rentar"/>
+<section id="cursos">
 
-
-<?php
-$publicado="Publicado";
-require "config.php";
-?>
-<?php
-@$todo=$_POST['todo'];
-if(isset($todo) and $todo=="post_comment"){
-
-$name=$_POST['name'];
-$name=mysql_real_escape_string($name);
-$email=$_POST['email'];
-$email=mysql_real_escape_string($email);
-$comentarios=$_POST['comentarios'];
-$comentarios=mysql_real_escape_string($comentarios);
-$estado = "OK";
-$msg="";
-
-if( strlen($name) <3 or strlen($name) > 25){
-$msg=$msg."Su nombre debe tener más de 3 caracteres y menos de 25. <BR>";
-$estado= "NOTOK";}                  
-
-if( strlen($comentarios) <3 ){
-$msg=$msg."Su comentario debe tener más de 3 caracteres por lo menos.<BR>";
-$estado= "NOTOK";}  
-//****************************
-if(!eregi("^[a-z0-9]+([_\\.-][a-z0-9]+)*" ."@"."([a-z0-9]+([\.-][a-z0-9]+)*)+"."\\.[a-z]{2,}"."$",$email)){
-$msg=$msg."Su email, no es correcto.<BR>";
-$estado= "NOTOK";}          
-//****************************
-
-
-if($estado<>"OK"){ 
-echo "$msg";
-}else{
-$fecha=date("Y-m-d"); 
-$estado='NO'; //Validar comentarios
-$query=mysql_query("insert into comentarios(publicado,fecha,name,email,comentarios,estado) values('$publicado','$fecha','$name','$email','$comentarios','$estado')");
-echo mysql_error();
-echo "Gracias por contactarnos le responderemos pronto. <br>";
-}
-}
-
-?>
-<div class="CASILLAS">
-<?php
-echo "<form method=post action=''><input type=hidden name=todo value=post_comment><span class='EstiloROJO'>* </span>
-Nombre:  <br /><input name=name type=text class='fondocasillausuario' size='42'>
-<br />
-<input type=hidden name=id />
-<span class='EstiloROJO'>* </span>E-mail 
-(No saldrá publicado):  <br /><input name=email type=text class='fondocasillausuario' size='42'>
-<br />
-<span class='EstiloROJO'>* </span>Comentarios:  <br />
-<textarea name=comentarios cols=40 rows=3 class='fondocasillausuario'></textarea><br /><br />
-<input type='reset' class='BOTONcomentarioborrar' value='    Borrar    '>
-  <input type=submit class='BOTONcomentarioenviar' value='   Publicar   '>
-</form>";
-?>
-</div>
-    </div>
-        
-   
+	<!--****************************************INICIA PRIMER CARRO*************************************************** -->
     
+	<a href="auto4.php"><article>
+
+
+        
+              
+        <img width="150px" height="100px" src="                                
+<?php 
+require "config1.php"; 
+$data = mysql_query("select urlProducto from imgproducto where idProducto='005' and idImg='11'");
+while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
+echo "$nt[urlProducto]";    
+}
+?>  ">
+		<p><?php 
+$data = mysql_query("select nameProducto from autoproducto where idProducto='005' and estadoProducto='VENTA'");
+while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
+echo "<p>$nt[nameProducto]</p>";   
+}?>  </p>
+		
+	</article></a>
+    <!--****************************************FINALIZA PRIMER CARRO*************************************************** -->
+   
+</section>
 
 <script type="text/javascript" src="js/jquery-latest.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
@@ -141,35 +91,17 @@ Nombre:  <br /><input name=name type=text class='fondocasillausuario' size='42
     }
   });
 });
-    
 
 </script>
-<script src="js/jquery.js"></script>
-<script>
-
-	$(function() {
-	var btn_movil = $('#nav-mobile'),
-		menu = $('#menu').find('ul');
-		
-	btn_movil.on('click', function (e) {
-		e.preventDefault();
-		
-		var el = $(this);
-		
-		el.toggleClass('nav-active');
-		menu.toggleClass('open-menu');
-		})
-	});
-</script>
-
-    
-	<footer>
+</body>
+<footer>
 <div>
 	<section id="about">
 	    <header>
 		<h3>Acerca de Flores Escobar</h3>
 		</header>
 		<p>
+		
 Crear un valor agregado a nuestros productos y servicios a través de la plena satisfacción de nuestros clientes, convirtiéndonos de esta manera en una empresa sólida y confiable, teniendo en cuenta lo más importante de nuestra razón de ser: El Cliente.
 	
 		
@@ -180,7 +112,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 		<h3>Categorias de Autos</h3>
 	</header>
 	<ul id="pie">
-		<li id="pie"><a href="sedan.php">Sedan</a></li>
+			<li id="pie"><a href="sedan.php">Sedan</a></li>
 		<li><a href="camioneta.php">Camioneta</a></li>
 		<li><a href="pickup.php">Pick-Up</a></li>
 		<li><a href="#">Coupé</a></li>
@@ -191,7 +123,7 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 			<h3>Acceso Directo</h3>
 		</header>
 		<ul>
-			<li><a href="index.html">Inicio</a></li>
+		<li><a href="index.html">Inicio</a></li>
 			<li><a href="venta.php">Venta</a></li>
 			<li><a href="reparacion.php">Reparación</a></li>
 			<li><a href="quienes_somos.html">Quienes Somos?</a></li>
@@ -201,8 +133,6 @@ Crear un valor agregado a nuestros productos y servicios a través de la plena s
 	
 </div>
 <a href="#"><img id="social"src="images/facebook.png" alt="" /></a>
-
 <p id="copyright">Derechos Reservados © 2015–2016 Flores Escobar S.A de C.V, San Miguel, El Salvador</p>
 </footer>
-    
 </html>
