@@ -54,13 +54,21 @@ p{
 }
 
 /*CSS PARA EL LOGO, QUE ESTA DENTRO DEL BANNER*/
-#bannerImg{ /*CARRITOOOOO*/
+#bannerImg { /*CARRITOOOOO*/
     position: relative;
     height: 50%;
     width: 100%;
 	display: block;
     clear: both;
     z-index: -10;
+}
+#banner_rentar{
+    position: relative;
+    height: 50%;
+    width: 100%;
+	display: block;
+    clear: both;
+    
 }
 
 /*BODY AND CONTAINER*/

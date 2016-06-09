@@ -10,147 +10,125 @@
 	<title></title>
 </head>
 <body>
-<nav>
-<img id="logo" src="images/banner.png" />
-	<ul class="menu">
-		<li><a href="index.html">Inicio</a></li>
-		<li><a href="venta.html">Venta</a>
-		<ul>
-			<li><a href="#">Sedan</a></li>
-			<li><a href="#">Camioneta</a></li>
-			<li><a href="#">Pick-Up</a></li>
-			<li><a href="#">Coupe</a></li>
-		</ul>
-		</li>
-		<li><a href="reparacion.html">Reparación</a>
-		<ul>
-		<li><a href="#">Sedan</a></li>
-		<li><a href="#">Camioneta</a></li>
-		<li><a href="#">Pick-Up</a></li>
-		<li><a href="#">Coupe</a></li>
-		</ul>
-		</li>
-		<li><a href="#">En Aduana</a>
-		<ul>
-			
-		   <li><a href="#">Sedan</a></li>
-		   <li><a href="#">Camioneta</a></li>
-		   <li><a href="#">Pick-Up</a></li>
-		   <li><a href="#">Coupe</a></li>
+    <header id="mainHeader">
+        <nav>
+            <!--<img id="logo" src="images/banner.png" />-->
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="venta.html">Venta</a>
+                <ul class="submenu">
+                    <li><a href="#">Sedan</a></li>
+                    <li><a href="#">Camioneta</a></li>
+                    <li><a href="#">Pick-Up</a></li>
+                    <li><a href="#">Coupe</a></li>
+                </ul>
+                </li>
+                <li><a href="reparacion.html">Reparación</a>
+                    <ul>
+                        <li><a href="#">Sedan</a></li>
+                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="#">Pick-Up</a></li>
+                        <li><a href="#">Coupe</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Contáctenos</a>
+                </li>
+                <li>   
+                    <a href="quienes_somos.html">Quienes Somos</a></li>
+                <li>
+                    <a href="index.php">Administrador</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-	</ul>
-	</li>
-	<li><a href="#">Marcas</a>
-			<ul>
-				
-			   <li><a href="#">BMW</a></li>
-			   <li><a href="#">CHEVROLET</a></li>
-			   <li><a href="#">FORD</a></li>
-			   <li><a href="#">GMC</a></li>
-			   <li><a href="#">HONDA</a></li>
-			   <li><a href="#">HYUNDAI</a></li>
-			   <li><a href="#">KIA</a></li>
-			   <li><a href="#">MAZDA</a></li>
-			   <li><a href="#">MITSUBISHI</a></li>
-			   <li><a href="#">NISSAN</a></li>
-			   <li><a href="#">SUZUKI</a></li>
-			   <li><a href="#">TOYOTA</a></li>
-	
-		</ul>
-		</li>
-		<li><a href="#">Contáctenos</a></li>
-		<li><a href="quienes_somos.html">Quienes Somos</a></li>
-	</ul>
-	<img src="images/banner_venta.png" id="banner_rentar"/>
-<section id="cursos">
+    <div id="container"><!--CONTAINER-->
+        <img src="images/banner_venta.png" id="banner_rentar"/>
+        <section id="cursos">
+            <!--****************************************INICIA PRIMER CARRO*************************************************** -->
+            <a href="auto3.php"><article>
+                <img width="150px" height="100px" src="                                
+        <?php 
+        require "config1.php"; 
+        $data = mysql_query("select urlProducto from imgproducto where idProducto='004' and idImg='8'");
+        while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
+        echo "$nt[urlProducto]";    
+        }
+        ?>  ">
+                <p><?php 
+        $data = mysql_query("select nameProducto from autoproducto where idProducto='004' and estadoProducto='VENTA'");
+        while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
+        echo "<p>$nt[nameProducto]</p>";   
+        }?>  </p>
 
-	<!--****************************************INICIA PRIMER CARRO*************************************************** -->
-    
-	<a href="auto3.php"><article>
+            </article></a>
+            <!--****************************************FINALIZA PRIMER CARRO*************************************************** -->
+            <!--****************************************INICIA SEGUNDO CARRO*************************************************** -->
+            <a href="auto4.php"><article>
 
 
-        
-              
+
         <img width="150px" height="100px" src="                                
-<?php 
-require "config1.php"; 
-$data = mysql_query("select urlProducto from imgproducto where idProducto='004' and idImg='8'");
-while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
-echo "$nt[urlProducto]";    
-}
-?>  ">
-		<p><?php 
-$data = mysql_query("select nameProducto from autoproducto where idProducto='004' and estadoProducto='VENTA'");
-while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
-echo "<p>$nt[nameProducto]</p>";   
-}?>  </p>
-		
-	</article></a>
-    <!--****************************************FINALIZA PRIMER CARRO*************************************************** -->
-    <!--****************************************INICIA SEGUNDO CARRO*************************************************** -->
-	<a href="auto4.php"><article>
-   
-        
-            
-<img width="150px" height="100px" src="                                
-<?php 
-$data = mysql_query("select urlProducto from imgproducto where idProducto='005' and idImg='11'");
-while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
-echo "$nt[urlProducto]";    
-}
-?>  ">
-		<p><?php 
-$data = mysql_query("select nameProducto from autoproducto where idProducto='005' and estadoProducto='venta'");
-while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
-echo "<p>$nt[nameProducto]</p>";   
-}?>  </p>
-		
-	</article></a>
-	
-<!--****************************************FINALIZA SEGUNDO CARRO*************************************************** -->
- <!--****************************************INICIA TERCER CARRO*************************************************** -->
-	<a href="auto5.php"><article>
-   
-        
-            
-<img width="150px" height="100px" src="                                
-<?php 
-$data = mysql_query("select urlProducto from imgproducto where idProducto='006' and idImg='14'");
-while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
-echo "$nt[urlProducto]";    
-}
-?>  ">
-		<p><?php 
-$data = mysql_query("select nameProducto from autoproducto where idProducto='006' and estadoProducto='VENTA'");
-while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
-echo "<p>$nt[nameProducto]</p>";   
-}?>  </p>
-		
-	</article></a>
-	
-<!--****************************************FINALIZA TERCER CARRO*************************************************** -->     
-    <!--****************************************INICIA CUARTO CARRO*************************************************** -->
-	<a href="auto6.php"><article>
-   
-        
-            
-<img width="150px" height="100px" src="                                
-<?php 
-$data = mysql_query("select urlProducto from imgproducto where idProducto='007' and idImg='17'");
-while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
-echo "$nt[urlProducto]";    
-}
-?>  ">
-		<p><?php 
-$data = mysql_query("select nameProducto from autoproducto where idProducto='007'");
-while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
-echo "<p>$nt[nameProducto]</p>";   
-}?>  </p>
-		
-	</article></a>
-	
-<!--****************************************FINALIZA CUARTO CARRO*************************************************** --> 
-</section>
+        <?php 
+        $data = mysql_query("select urlProducto from imgproducto where idProducto='005' and idImg='11'");
+        while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
+        echo "$nt[urlProducto]";    
+        }
+        ?>  ">
+                <p><?php 
+        $data = mysql_query("select nameProducto from autoproducto where idProducto='005' and estadoProducto='venta'");
+        while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
+        echo "<p>$nt[nameProducto]</p>";   
+        }?>  </p>
+
+            </article></a>
+
+        <!--****************************************FINALIZA SEGUNDO CARRO*************************************************** -->
+         <!--****************************************INICIA TERCER CARRO*************************************************** -->
+            <a href="auto5.php"><article>
+
+
+
+        <img width="150px" height="100px" src="                                
+        <?php 
+        $data = mysql_query("select urlProducto from imgproducto where idProducto='006' and idImg='14'");
+        while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
+        echo "$nt[urlProducto]";    
+        }
+        ?>  ">
+                <p><?php 
+        $data = mysql_query("select nameProducto from autoproducto where idProducto='006' and estadoProducto='VENTA'");
+        while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
+        echo "<p>$nt[nameProducto]</p>";   
+        }?>  </p>
+
+            </article></a>
+
+        <!--****************************************FINALIZA TERCER CARRO*************************************************** -->     
+            <!--****************************************INICIA CUARTO CARRO*************************************************** -->
+            <a href="auto6.php"><article>
+
+
+
+        <img width="150px" height="100px" src="                                
+        <?php 
+        $data = mysql_query("select urlProducto from imgproducto where idProducto='007' and idImg='17'");
+        while($nt=mysql_fetch_array($data)){ $urlProducto=nl2br($nt['urlProducto']);
+        echo "$nt[urlProducto]";    
+        }
+        ?>  ">
+                <p><?php 
+        $data = mysql_query("select nameProducto from autoproducto where idProducto='007'");
+        while($nt=mysql_fetch_array($data)){ $nameProducto=nl2br($nt['nameProducto']);
+        echo "<p>$nt[nameProducto]</p>";   
+        }?>  </p>
+
+            </article></a>
+
+        <!--****************************************FINALIZA CUARTO CARRO*************************************************** --> 
+        </section>
+    </div><!--FIN CONTAINER-->
 
 <script type="text/javascript" src="js/jquery-latest.js"></script>
 <script type="text/javascript" src="js/particles.min.js"></script>
