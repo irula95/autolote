@@ -34,15 +34,6 @@
                         <li><a href="#">Coupé</a></li>
                     </ul>
                 </li>
-                <!--
-                <li><a href="#">Aduana</a>
-                    <ul class="submenu">
-                       <li><a href="#">Sedan</a></li>
-                       <li><a href="#">Camioneta</a></li>
-                       <li><a href="#">Pick-Up</a></li>
-                       <li><a href="#">Coupé</a></li>
-                    </ul>
-                </li>-->
                 <li>
                     <a href="contactenos.php">Contáctenos</a>
                 </li>

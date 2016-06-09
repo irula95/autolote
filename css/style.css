@@ -71,6 +71,14 @@ p{
 }
 
 /*BODY AND CONTAINER*/
+#cursos img{
+    width="150px";           /*CODIGO PARA CADA IMAGEN*/
+    height="100px";
+}
+.item{
+    width="150px";
+    height="100px";
+}
 #container{
     padding: 3%;
     padding-left: 17%;

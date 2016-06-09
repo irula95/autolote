@@ -19,7 +19,7 @@
                 <li><a href="venta.php">Venta</a>
                     <ul class="submenu">
                         <li><a href="sedan.php">Sedan</a></li>
-                        <li><a href="#">Camioneta</a></li>
+                        <li><a href="camioneta.php">Camioneta</a></li>
                         <li><a href="pickup.php">Pick-Up</a></li>
                         <li><a href="#">Coupe</a></li>
                     </ul>
