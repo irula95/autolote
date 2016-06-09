@@ -82,7 +82,7 @@
         <h2>Contáctenos vía web.</h2>
          <?php
         $actualiza="<META HTTP-EQUIV='Refresh' CONTENT='1; URL=contactenos.php'>";//actualizamos la pagina
-        $q=mysql_query("select name, comentarios,fecha from comentarios where  estado='OK' order by fecha ASC ");
+        $q=mysql_query("select name, comentarios, fecha from comentarios where  estado='OK' order by fecha ASC ");
         while($nt=mysql_fetch_array($q)){ $comentarios=nl2br($nt['comentarios']);
         echo "<li>";
         echo "<div>";
