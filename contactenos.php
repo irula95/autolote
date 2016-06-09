@@ -49,21 +49,6 @@
     <div id="content">
 
 
-        <?php
-$actualiza="<META HTTP-EQUIV='Refresh' CONTENT='1; URL=contactenos.php'>";//actualizamos la pagina
-$q=mysql_query("select name, comentarios,fecha from comentarios where  estado='OK' order by fecha ASC ");
-while($nt=mysql_fetch_array($q)){ $comentarios=nl2br($nt['comentarios']);
-echo "<li>";
-echo "<div>";
-
-echo "<h3> ".date("d-M-y",strtotime($nt['fecha']))."</h3>";
-echo "<h2><strong>$nt[name]</strong></h2>";                         
-echo "</div>";
-echo "<h2>$comentarios</h2>";
-}
-echo"</li>";
-
-?>
 <?php
 $publicado="Publicado";
 require "config.php";
@@ -102,7 +87,7 @@ $fecha=date("Y-m-d");
 $estado='NO'; //Validar comentarios
 $query=mysql_query("insert into comentarios(publicado,fecha,name,email,comentarios,estado) values('$publicado','$fecha','$name','$email','$comentarios','$estado')");
 echo mysql_error();
-echo "Gracias por contactarnos le responderemos pronto. <br>".$actualiza;
+echo "Gracias por contactarnos le responderemos pronto. <br>";
 }
 }
 
